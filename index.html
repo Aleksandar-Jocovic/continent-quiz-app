@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <title>Continent Quiz</title>
+</head>
+
+<body>
+  <!-- home page -->
+  <div id="homePage">
+    <h5>CONTINET QUIZ</h5>
+    <h3 class="scoreDisNone">Your Scores</h3>
+
+    <div class="scoreDisNone" id="homePtsContainer">
+      <div class="scoreRow" id="scoreRowOne">
+        <p class="scoreIndex">#1</p>
+        <ul>
+          <li id="dateOne">. . .</li>
+          <li class="scorePoints" id="scoreOne">0 pts</li>
+        </ul>
+      </div>
+
+      <div class="scoreRow" id="scoreRowTwo">
+        <p class="scoreIndex">#2</p>
+        <ul>
+          <li id="dateTwo">. . .</li>
+          <li class="scorePoints" id="scoreTwo">0 pts</li>
+        </ul>
+      </div>
+
+      <div class="scoreRow" id="scoreRowThree">
+        <p class="scoreIndex">#3</p>
+        <ul>
+          <li id="dateThree">. . .</li>
+          <li class="scorePoints" id="scoreThree">0 pts</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="playBtn" onclick="playToQuestionP()">PLAY</button>
+    <button class="clearBtn" onclick="clearScores()">Clear Scores</button>
+  </div>
+  <!--     question page -->
+  <div id="questionPage" class="invisible">
+    <h5>CONTINET QUIZ</h5>
+    <h3 id="questionProgress">Question 1 of 5</h3>
+
+    <div id="centerQuestion">
+      <div id="questionImageContainer">
+        <img id="img" />
+      </div>
+      <button class="answerBtn" id="0" onclick="okkk(this.id)">a</button>
+      <button class="answerBtn" id="1" onclick="okkk(this.id)">Amer</button>
+      <button class="answerBtn" id="2" onclick="okkk(this.id)">Ao</button>
+
+      <button id="nextBtn" onclick="rendQuestion()">NEXT</button>
+    </div>
+  </div>
+
+  <!-- result page -->
+  <div id="resultPage" class="invisible">
+    <h5>CONTINET QUIZ</h5>
+    <h3>Results</h3>
+
+    <div id="centerResult">
+      <div id="cubeCircle"></div>
+      <p id="yourScore">Your Score</p>
+      <h1 id="finalScore">2500 pts</h1>
+      <button id="restartBtn" onclick="finishToPlayP()">Finish</button>
+    </div>
+  </div>
+
+  <!--  <script type="text/javascript" src="./script/parseJson.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./quiz.js"></script>
+  <!-- <script type="text/javascript" src="./parseJson.js"></script> -->
+</body>
+
+</html>
